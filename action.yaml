@@ -1,0 +1,32 @@
+name: 'Choreo Config Generation Status Update'
+description: 'Choreo Config Generation Status Update'
+author: WSO2
+branding:
+  icon: 'arrow-up-circle'
+  color: 'orange'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+inputs:
+  baseURL:
+    required: true
+    description: 'Call back base URL'
+  componentId:
+    required: true
+    description: 'Component ID'
+  versionId:
+    required: true
+    description: 'Version ID'
+  configMappingId:
+    required: true
+    description: "Configuration Mapping Id"
+  sourceCommit:
+    required: true
+    description: 'Source Commit'
+  gitOpsCommit:
+    required: false
+    description: 'Git Ops Respository Commit'
+    default: ""
+  status:
+    required: true
+    description: 'Status of the Configuration Creation Workflow (In Progress, Completed or Failed)'

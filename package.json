@@ -1,0 +1,14 @@
+{
+  "name": "choreo-update-config-generation-status",
+  "version": "1.0.0",
+  "description": "This is a git action which uses to update the choreo config generation status",
+  "main": "index.js",
+  "repository": "https://github.com/choreo-templates/choreo-update-config-generation-status",
+  "author": "Yashod Perera (https://github.com/yashodgayashan)",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@octokit/core": "^4.1.0",
+    "axios": "^1.2.0"
+  }
+}

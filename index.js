@@ -10,7 +10,7 @@ try {
     const status = core.getInput('status');
     const configMappingId = core.getInput('configMappingId');
 
-    const url = `${baseURL}/choreo/component/${componentId}/${versionId}/${sourceCommit}/config-mapping`;
+    const url = `${baseURL}/orgs/choreo/projects/project/components/${componentId}/versions/${versionId}/commits/${sourceCommit}/configurable-commit-mapping`;
     const payload = {
         status: status,
         id: configMappingId,

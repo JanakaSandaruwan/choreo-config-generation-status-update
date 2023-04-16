@@ -8,11 +8,13 @@ try {
     const sourceCommit = core.getInput('sourceCommit');
     const gitOpsCommit = core.getInput('gitOpsCommit');
     const status = core.getInput('status');
+    const workflow = core.getInput('workflow');
     const configMappingId = core.getInput('configMappingId');
 
     const url = `${baseURL}/orgs/choreo/projects/project/components/${componentId}/versions/${versionId}/commits/${sourceCommit}/configurable-commit-mapping`;
     const payload = {
         status: status,
+        workflow: workflow,
         id: configMappingId,
         gitOpsCommit: gitOpsCommit
     }

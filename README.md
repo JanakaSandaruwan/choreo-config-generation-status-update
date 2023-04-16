@@ -16,6 +16,7 @@ steps:
       sourceCommit: ${{ SOURCE_COMMIT }}
       gitOpsCommit: ${{ GIT_OPS_COMMIT }}
       status: ${{ STATUS }}
+      workflow: ${{ WORKFLOW }}
 ```
 
 

@@ -10,13 +10,15 @@ try {
     const status = core.getInput('status');
     const workflow = core.getInput('workflow');
     const configMappingId = core.getInput('configMappingId');
+    const token = core.getInput('token');
 
     const url = `${baseURL}/orgs/choreo/projects/project/components/${componentId}/versions/${versionId}/commits/${sourceCommit}/configurable-commit-mapping`;
     const payload = {
         status: status,
         workflow: workflow,
         id: configMappingId,
-        gitOpsCommit: gitOpsCommit
+        gitOpsCommit: gitOpsCommit,
+        token: token
     }
     console.log("Payload : ", payload);
     axios.put(url, payload).then(
